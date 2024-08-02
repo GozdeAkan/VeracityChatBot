@@ -1,0 +1,65 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to Veracity Chat Bot! Type "brand settings" to get started.
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# AttachmentInput_Prompt_bZeydt_text()
+- yukle ${turn.activity.attachments[0].contentType}
+# AttachmentInput_Prompt_bZeydt()
+[Activity
+    Text = ${AttachmentInput_Prompt_bZeydt_text()}
+]
+
+# SendActivity_mU4BIM_text()
+- okey
+# SendActivity_mU4BIM()
+[Activity
+    Text = ${SendActivity_mU4BIM_text()}
+]
+
+# SendActivity_r4D813_text()
+- degil
+# SendActivity_r4D813()
+[Activity
+    Text = ${SendActivity_r4D813_text()}
+]
+
+# AttachmentInput_Prompt_GFr8bJ_text()
+- Let us get started with your logo. Could you please upload your logo image?
+# AttachmentInput_Prompt_GFr8bJ()
+[Activity
+    Text = ${AttachmentInput_Prompt_GFr8bJ_text()}
+]
+
+# SendActivity_0jGeLM_text()
+- Try again!
+# SendActivity_0jGeLM()
+[Activity
+    Text = ${SendActivity_0jGeLM_text()}
+]
+
+# AttachmentInput_Prompt_RO51jZ()
+[Activity
+    Text = ${AttachmentInput_Prompt_RO51jZ_text()}
+]
+
+# AttachmentInput_Prompt_RO51jZ_text()
+- Let us get started with your logo. Could you please upload your logo image?
+# SendActivity_53OjlL()
+[Activity
+    Text = ${SendActivity_53OjlL_text()}
+]
+
+# SendActivity_53OjlL_text()
+- Try again!

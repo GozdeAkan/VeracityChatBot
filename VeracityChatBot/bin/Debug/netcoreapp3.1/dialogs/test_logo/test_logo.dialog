@@ -1,0 +1,24 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "PMXOW8",
+    "name": "test_logo",
+    "comment": "logoyu tutar"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ZJZN4o"
+      },
+      "actions": []
+    }
+  ],
+  "generator": "test_logo.lg",
+  "recognizer": "test_logo.lu.qna",
+  "id": "test_logo"
+}

@@ -1,0 +1,38 @@
+[import](common.lg)
+
+# TextInput_Prompt_vXm1LK_text()
+-   Great! Now, can you provide the primary color hex code for your brand?
+# TextInput_Prompt_vXm1LK()
+[Activity
+    Text = ${TextInput_Prompt_vXm1LK_text()}
+]
+
+# TextInput_UnrecognizedPrompt_vXm1LK_text()
+- ```Sorry, '${this.value}' isn't valid hex code. Please try again.
+ ```
+# TextInput_UnrecognizedPrompt_vXm1LK()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_vXm1LK_text()}
+]
+
+# TextInput_Prompt_j1kG6N_text()
+- Great! Now let's move on to your social media accounts. Please provide the URLs of your Facebook, Instagram, LinkedIn, and Twitter profiles, separated by commas.
+# TextInput_Prompt_j1kG6N()
+[Activity
+    Text = ${TextInput_Prompt_j1kG6N_text()}
+]
+
+# TextInput_UnrecognizedPrompt_j1kG6N_text()
+- ```Sorry, '${this.value}' isn't valid social media profile urls. Please try again.
+ ```
+# TextInput_UnrecognizedPrompt_j1kG6N()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_j1kG6N_text()}
+]
+
+# SendActivity_em0OSS_text()
+- Thank you, our conversation ends here
+# SendActivity_em0OSS()
+[Activity
+    Text = ${SendActivity_em0OSS_text()}
+]

@@ -1,0 +1,49 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "YJ1VNq",
+    "name": "getWebsiteUrl",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "EEYxnJ"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "TszvFS"
+          },
+          "disabled": false,
+          "maxTurnCount": 10,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_TszvFS()}",
+          "prompt": "${TextInput_Prompt_TszvFS()}",
+          "property": "user.url",
+          "validations": [
+            "isMatch(turn.activity.text, \"https?:\\/\\/(?:www\\.)?[A-Za-z0-9.-]+\\.[A-Za-z]{2,}(?:\\/[A-Za-z0-9._~:\\/?#@!$&'()*+,;=%-]*)\")"
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "6AK7Pw"
+          },
+          "activityProcessed": true,
+          "dialog": "getSocialMediaProfiles"
+        }
+      ]
+    }
+  ],
+  "generator": "getWebsiteUrl.lg",
+  "recognizer": "getWebsiteUrl.lu.qna",
+  "id": "getWebsiteUrl"
+}

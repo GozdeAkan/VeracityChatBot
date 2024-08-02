@@ -1,0 +1,48 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "af3XQi",
+    "name": "getBusinessDescription",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "RyzeM7"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "FNUQ9P"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_FNUQ9P()}",
+          "property": "user.businessDesc"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "xaRrQp"
+          },
+          "activityProcessed": true,
+          "dialog": "getWebsiteUrl"
+        }
+      ]
+    }
+  ],
+  "generator": "getBusinessDescription.lg",
+  "recognizer": "getBusinessDescription.lu.qna",
+  "id": "getBusinessDescription"
+}

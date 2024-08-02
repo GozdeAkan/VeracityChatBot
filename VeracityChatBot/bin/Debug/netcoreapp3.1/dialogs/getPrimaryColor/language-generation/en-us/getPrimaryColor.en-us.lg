@@ -1,0 +1,17 @@
+[import](common.lg)
+
+# TextInput_Prompt_BXlKxC()
+[Activity
+    Text = ${TextInput_Prompt_BXlKxC_text()}
+]
+
+# TextInput_Prompt_BXlKxC_text()
+-   Great! Now, can you provide the primary color hex code for your brand?
+# TextInput_UnrecognizedPrompt_BXlKxC()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_BXlKxC_text()}
+]
+
+# TextInput_UnrecognizedPrompt_BXlKxC_text()
+- ```Sorry, '${this.value}' isn't valid hex code. Please try again.
+ ```

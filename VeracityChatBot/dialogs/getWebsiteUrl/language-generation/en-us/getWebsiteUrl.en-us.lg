@@ -1,0 +1,30 @@
+[import](common.lg)
+
+# TextInput_Prompt_TszvFS_text()
+- Thanks! Could you also provide your business website URL?
+# TextInput_Prompt_TszvFS()
+[Activity
+    Text = ${TextInput_Prompt_TszvFS_text()}
+]
+
+# TextInput_UnrecognizedPrompt_TszvFS_text()
+- ```Sorry, '${this.value}' isn't valid url. Please try again.
+ ```
+# TextInput_UnrecognizedPrompt_TszvFS()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_TszvFS_text()}
+]
+
+# TextInput_Prompt_iny21p_text()
+-  Thanks! Could you also provide your business website URL?
+# TextInput_Prompt_iny21p()
+[Activity
+    Text = ${TextInput_Prompt_iny21p_text()}
+]
+
+# TextInput_UnrecognizedPrompt_iny21p_text()
+- Sorry, '${this.value}' isn't valid hex code. Please try again.
+# TextInput_UnrecognizedPrompt_iny21p()
+[Activity
+    Text = ${TextInput_UnrecognizedPrompt_iny21p_text()}
+]

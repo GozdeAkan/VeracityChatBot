@@ -1,0 +1,63 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "M90w8v",
+    "name": "getLogo",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "a4Orfm"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.AttachmentInput",
+          "$designer": {
+            "id": "dtfUVp"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "property": "user.logo",
+          "prompt": "${AttachmentInput_Prompt_dtfUVp()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "duhYWX"
+          },
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "ujJHc6"
+              },
+              "property": "user.logo"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "mYDMtV"
+              },
+              "activity": "${SendActivity_mYDMtV()}"
+            }
+          ],
+          "condition": "contains( user.logo.contentType, \"image\")"
+        }
+      ]
+    }
+  ],
+  "generator": "getLogo.lg",
+  "recognizer": "getLogo.lu.qna",
+  "id": "getLogo"
+}

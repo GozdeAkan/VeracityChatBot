@@ -1,0 +1,54 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "qNq09T",
+    "name": "getSocialMediaProfiles",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "wLHDg9"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "j1kG6N"
+          },
+          "disabled": false,
+          "maxTurnCount": 10,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_j1kG6N()}",
+          "prompt": "${TextInput_Prompt_j1kG6N()}",
+          "property": "user.socialMediaProfiles",
+          "validations": [
+            "isMatch(turn.activity.text, \"(?:(?:https?:\\/\\/)?(?:www\\.)?(?:facebook\\.com|instagram\\.com|linkedin\\.com|twitter\\.com)\\/[A-Za-z0-9._%+-]+)(?:,\\s*(?:(?:https?:\\/\\/)?(?:www\\.)?(?:facebook\\.com|instagram\\.com|linkedin\\.com|twitter\\.com)\\/[A-Za-z0-9._%+-]+))*\")"
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "em0OSS"
+          },
+          "activity": "${SendActivity_em0OSS()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "7OuilE"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "getSocialMediaProfiles.lg",
+  "recognizer": "getSocialMediaProfiles.lu.qna",
+  "id": "getSocialMediaProfiles"
+}

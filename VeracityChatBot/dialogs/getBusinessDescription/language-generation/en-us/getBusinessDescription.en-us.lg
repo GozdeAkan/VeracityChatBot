@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# TextInput_Prompt_FNUQ9P()
+[Activity
+    Text = ${TextInput_Prompt_FNUQ9P_text()}
+]
+
+# TextInput_Prompt_FNUQ9P_text()
+-  Perfect! Next, I need some details about your business. Could you please provide a brief business description?

@@ -1,0 +1,49 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "GaT5jU",
+    "name": "getPrimaryColor",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ch4G21"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "BXlKxC"
+          },
+          "disabled": false,
+          "maxTurnCount": 10,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_BXlKxC()}",
+          "prompt": "${TextInput_Prompt_BXlKxC()}",
+          "property": "user.primaryColor",
+          "validations": [
+            "isMatch(turn.activity.text, \"^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$\")"
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "qgv9LJ"
+          },
+          "activityProcessed": true,
+          "dialog": "getBusinessDescription"
+        }
+      ]
+    }
+  ],
+  "generator": "getPrimaryColor.lg",
+  "recognizer": "getPrimaryColor.lu.qna",
+  "id": "getPrimaryColor"
+}

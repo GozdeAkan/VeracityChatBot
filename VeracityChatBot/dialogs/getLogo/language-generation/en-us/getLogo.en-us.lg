@@ -1,0 +1,15 @@
+[import](common.lg)
+
+# AttachmentInput_Prompt_dtfUVp_text()
+- Let us get started with your logo. Could you please upload your logo image?
+# AttachmentInput_Prompt_dtfUVp()
+[Activity
+    Text = ${AttachmentInput_Prompt_dtfUVp_text()}
+]
+
+# SendActivity_mYDMtV_text()
+- Try again!
+# SendActivity_mYDMtV()
+[Activity
+    Text = ${SendActivity_mYDMtV_text()}
+]
